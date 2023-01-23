@@ -1,0 +1,40 @@
+@import './colors.scss';
+@import './footer.scss';
+@import './header.scss';
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    .wrapper {
+        display: grid;
+        grid-template-rows: 10vh 80vh 10vh;
+
+        .content {
+            display: flex;
+
+            nav {
+                padding: 10px;
+                
+                ul {
+                    list-style: none;
+                    li {
+                        cursor: pointer;
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            section {
+                height: 97%;
+                width: 100%;
+                overflow-y: auto;
+                padding: 10px;
+    
+            }
+        }
+
+
+    }
+}
