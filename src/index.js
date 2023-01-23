@@ -1,28 +1,31 @@
-import {PATH} from './shared/locations' 
+import {PATH, location} from './shared/locations' 
 import {links} from './shared/links'
-import {gitLinks} from './components/git/git'
 import './style.scss';
 
 
 window.onload = () => {
     const pathURL = window.location.pathname
     switch (pathURL) {
-        case '/':
+        case location.about:
             links()
             break;
-        case '/git.html':
+        case location.experience:
             links()
             break;
-        case '/projects.html':
-            links()
-            break;
-
-        case '/skills.html':
+        case location.git:
             links()
             break;
 
-        case '/experience.html':
+        case location.projects:
             links()
+            break;
+
+        case location.skills:
+            links()
+            break;
+        
+        default:
+            window.location.href = PATH.about
             break;
         
     }
